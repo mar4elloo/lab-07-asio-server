@@ -47,6 +47,7 @@ public:
         system_clock::now() -
         the_time).count() >= 5;
     }
+
 private:
     std::chrono::system_clock::
     time_point the_time;
@@ -55,12 +56,9 @@ private:
     socket the_socket;
 };
 
-unsigned short
-the_port = 8001;
-unsigned short
-the_username_maxsize = 20;
-unsigned short
-the_command_line_maxsize = 1024;
+int the_port = 8001;
+int the_username_maxsize = 20;
+int the_command_line_maxsize = 1024;
 typedef boost::shared_ptr
         <talk_to_client> the_ptr_of_client;
 typedef std::vector
